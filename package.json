@@ -7,8 +7,8 @@
   "scripts": {
     "pre-commit": "prettier . --write && eslint .",
     "lint": "eslint .",
-    "dev": "nodemon index.ts",
-    "build": "tsc",
+    "dev": "node init && nodemon index.ts",
+    "build": "node init && tsc",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:test": "npx sequelize-cli db:migrate --env test",
     "seed": "npx sequelize-cli db:seed:all",
